@@ -22,9 +22,6 @@ int main()
 		getline(infile, data);
 		istringstream str(data);
 		string tempo;
-		while(str>>tempo){//将文本中的空格剥离 
-			stringstream fly(tempo);
-			string zoom;
 			while(getline(fly,zoom,'(')) {//将文本中的（剥离 
 				stringstream big(zoom);
 				string huge;
@@ -42,6 +39,19 @@ int main()
 								else{
 									tot +=0;
 								}
+							}
+							if(nose==keyword1[0]&&q==1){
+								y=cas;
+							}
+							if(nose==keyword1[0]){//计算总的switch的数量 
+								swi+=1;
+								q+=1;
+							}
+							else{
+								swi+=0;
+							}
+							if(nose==keyword2[0]){//计算总的case的数量 
+								cas+=1;
 							}
 						}
 					}			
